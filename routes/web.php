@@ -12,8 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome;');
 });
+
+Route::group(['namespace'=>'Admin'], function(){
+	Route::get('dashboard','DashboardController@index');
+});
+
 
 Auth::routes();
 

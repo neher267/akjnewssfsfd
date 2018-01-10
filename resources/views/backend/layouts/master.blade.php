@@ -14,37 +14,15 @@
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
-    </script>
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel='stylesheet' type='text/css' />
-    <!-- font CSS -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- font-awesome icons -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- //font-awesome icons -->
-    <!-- chart -->
-    <script src="js/Chart.js"></script>
-    <!-- //chart -->
-    <!-- js-->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <!--webfonts-->
+    </script>    
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <!--//webfonts-->
-    <!--animate-->
-    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-    <script src="js/wow.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="{{asset('css/backend.css')}}">
+    <script src="{{asset('js/backend-top.js')}}"></script>
+
     <script>
         new WOW().init();
     </script>
-    <!--//end-animate-->
-    <!-- Metis Menu -->
-    <script src="js/metisMenu.min.js"></script>
-    <script src="js/custom.js"></script>
-    <link href="css/custom.css" rel="stylesheet">
-    <!--//Metis Menu -->
 </head>
 
 <body class="cbp-spmenu-push">
@@ -152,8 +130,8 @@
         <!--left-fixed -navigation-->
         
         <!-- header-starts -->
-        <div class="sticky-header header-section ">
-        </div>
+        @include('backend.layouts.partials._header')
+        
         <!-- //header-ends -->
 
         <!-- main content start-->
@@ -441,6 +419,6 @@
         <!--//footer-->
 	</div>
 
-	@include('layouts.backend.partials._script')
+	<script src="{{asset('js/backend-footer.js')}}"></script>
 </body>
 </html>
